@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Named:</strong>
+  <%= @device.nameD %>
+</p>
+
+<p>
+  <strong>Producer:</strong>
+  <%= @device.producer_id %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @device.info %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @device.category_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @device.price %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @device.supplier_id %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

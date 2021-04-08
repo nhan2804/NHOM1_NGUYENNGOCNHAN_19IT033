@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Producers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Namep</th>
+      <th>Natunal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @producers.each do |producer| %>
+      <tr>
+        <td><%= producer.nameP %></td>
+        <td><%= producer.natunal %></td>
+        <td><%= link_to 'Show', producer %></td>
+        <td><%= link_to 'Edit', edit_producer_path(producer) %></td>
+        <td><%= link_to 'Destroy', producer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Producer', new_producer_path %>

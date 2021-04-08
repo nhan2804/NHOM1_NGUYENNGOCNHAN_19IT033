@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameD: MyString
+  producer: one
+  info: MyString
+  category: one
+  price: MyString
+  supplier: one
+
+two:
+  nameD: MyString
+  producer: two
+  info: MyString
+  category: two
+  price: MyString
+  supplier: two

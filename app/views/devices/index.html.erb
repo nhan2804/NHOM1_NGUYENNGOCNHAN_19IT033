@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="btn btn-success"><%= link_to 'Tạo mới thiết bị' , new_device_path %></div>
+<h3>Danh mục sản phẩm</h3>
+<ul>
+<% @categories.each do |cate| %>
+  <li style="color:rgb(59, 173, 240)">
+    <%= link_to cate.name , cate %>
+  </li>
+  <% end %>
+</ul>
+<h1>Danh sách thiết bị</h1>
+<div class="row">
+  <% @devices.each do |device| %>
+   <div class="col-4">
+    <div class="card">
+      <div class="card-header">
+        <img src="<%= device.image %>" style="width:100%">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= device.nameD %></h5>
+        <p class="card-text"><%= device.info %></p>
+        <div class="btn btn-primary"><%= link_to 'Xem ngay' , device %></div>
+        <div class="btn btn-warning">
+          <%= link_to 'Sửa nó?' , edit_device_path(device) %>
+        </div>
+        <div class="btn btn-danger">
+          <%= link_to 'Xóa' , device, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    </div>
+   </div>
+    <% end %>
+</div>
+<br>
+
+
